@@ -1,0 +1,333 @@
+/* ===== 全局基础 ===== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Microsoft YaHei", "PingFang SC", Arial, sans-serif;
+  background: #f4f8fc;
+  color: #333;
+  line-height: 1.7;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ===== 页头 Header ===== */
+.header {
+  padding: 60px 20px;
+  text-align: center;
+  color: #fff;
+  background: linear-gradient(135deg, #0f3c6e, #1f6fd1);
+}
+
+.header.home {
+  padding: 80px 20px;
+}
+
+.header.country {
+  background: linear-gradient(135deg, #1a4f8b, #3a8dde);
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 32px;
+  letter-spacing: 1px;
+}
+
+.header p {
+  margin-top: 12px;
+  font-size: 16px;
+  opacity: 0.9;
+}
+
+/* ===== 容器 ===== */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 40px auto;
+}
+
+/* ===== 卡片 Card ===== */
+.card {
+  background: #fff;
+  border-radius: 14px;
+  padding: 28px;
+  margin-bottom: 30px;
+  box-shadow: 0 10px 30px rgba(0, 60, 120, 0.08);
+}
+
+.section-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1f6fd1;
+  margin-bottom: 18px;
+  border-left: 5px solid #1f6fd1;
+  padding-left: 12px;
+}
+
+/* ===== 网格布局 ===== */
+.grid {
+  display: grid;
+  gap: 24px;
+}
+
+.grid.five {
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+/* ===== 模块 Tile ===== */
+.tile {
+  background: linear-gradient(180deg, #ffffff, #f1f6fd);
+  border-radius: 14px;
+  padding: 26px 20px;
+  text-align: center;
+  box-shadow: 0 6px 20px rgba(0, 80, 160, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tile:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 36px rgba(0, 80, 160, 0.2);
+}
+
+.tile h3 {
+  margin-top: 0;
+  font-size: 18px;
+  color: #0f3c6e;
+}
+
+.tile p {
+  font-size: 14px;
+  color: #666;
+  margin: 12px 0 18px;
+}
+
+/* ===== 按钮 Button ===== */
+.button {
+  display: inline-block;
+  padding: 10px 22px;
+  border-radius: 22px;
+  font-size: 14px;
+  font-weight: 500;
+  background: linear-gradient(135deg, #1f6fd1, #3a8dde);
+  color: #fff;
+  box-shadow: 0 6px 16px rgba(31, 111, 209, 0.4);
+  transition: all 0.25s ease;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 22px rgba(31, 111, 209, 0.6);
+}
+
+.button.light {
+  background: #e8f1ff;
+  color: #1f6fd1;
+  box-shadow: none;
+}
+
+.button.light:hover {
+  background: #d6e6ff;
+}
+
+/* ===== 国家页按钮排列 ===== */
+.nav-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+/* ===== 风险提示 ===== */
+.warn {
+  padding: 14px 18px;
+  border-radius: 10px;
+  margin-bottom: 12px;
+  font-size: 14px;
+}
+
+.warn.red {
+  background: #ffe6e6;
+  color: #b30000;
+  border-left: 6px solid #e60000;
+}
+
+.warn.yellow {
+  background: #fff4d6;
+  color: #a36b00;
+  border-left: 6px solid #ffb300;
+}
+
+.warn.blue {
+  background: #e6f1ff;
+  color: #0056b3;
+  border-left: 6px solid #3399ff;
+}
+
+/* ===== 列表 ===== */
+.news-list {
+  padding-left: 20px;
+}
+
+.news-list li {
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+/* ===== 轮播图占位 ===== */
+.carousel {
+  border-radius: 14px;
+  overflow: hidden;
+  margin-top: 10px;
+}
+
+.carousel img {
+  width: 100%;
+  display: block;
+}
+
+/* ===== 页脚 ===== */
+.footer {
+  background: linear-gradient(135deg, #0f3c6e, #1f6fd1);
+  color: #fff;
+  text-align: center;
+  padding: 18px 10px;
+  font-size: 14px;
+  margin-top: 60px;
+}
+
+/* 首页轮播布局 */
+.focus-layout {
+  display: flex;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+/* 轮播图只占一半 */
+.carousel {
+  width: 50%;
+  height: 260px;           /* ✅ 控制高度，不再巨大 */
+  border-radius: 14px;
+  overflow: hidden;
+  background: #eef4fb;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.08);
+}
+
+/* 图片自适应，不闪 */
+.carousel img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+
+
+/* 右侧预留区域 */
+.hot-links {
+  width: 50%;
+  padding: 20px;
+  color: #666;
+  background: #f7fbff;
+  border-radius: 14px;
+}
+
+/* ===== 企业订阅模块（右上角） ===== */
+.subscribe-box {
+  position: absolute;
+  top: 24px;
+  right: 40px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 10px 14px;
+  border-radius: 12px;
+  backdrop-filter: blur(6px);
+}
+
+.subscribe-title {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.subscribe-box input {
+  border: none;
+  outline: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 13px;
+  width: 140px;
+}
+
+.subscribe-box button {
+  background: #ffffff;
+  color: #1e5fa3;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.subscribe-box button:hover {
+  background: #e6f0ff;
+}
+
+/* 防止 header 被遮挡 */
+.header.home {
+  position: relative;
+}
+
+/* ===== 订阅成功弹窗 ===== */
+.subscribe-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.45);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 32px 36px;
+  border-radius: 16px;
+  text-align: center;
+  width: 360px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.modal-content h3 {
+  margin-bottom: 12px;
+  color: #1e5fa3;
+}
+
+.modal-content p {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.6;
+}
+
+.modal-content button {
+  margin-top: 20px;
+  padding: 8px 20px;
+  background: #1e5fa3;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.modal-content button:hover {
+  background: #174b85;
+}
